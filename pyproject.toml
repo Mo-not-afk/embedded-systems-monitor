@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "embedded-systems-monitor"
+version = "0.1.0"
+description = "A local embedded sensor telemetry simulator and dashboard"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+serial = ["pyserial>=3.5"]
+
+[project.scripts]
+sensor-monitor = "sensor_monitor.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
